@@ -1,0 +1,121 @@
+.App {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+}
+
+.notes-container {
+  display: flex;
+  padding: 40px 0;
+  overflow-y: auto;
+}
+
+.notes-list {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p.notes-list--empty {
+  padding: 0;
+  margin: auto 0;
+  color: lightgray;
+}
+
+li.note {
+  padding: 20px 15px;
+  transition: all .3s;
+  border: 0px solid transparent;
+}
+
+li.note:hover {
+  background-color: whitesmoke
+}
+
+li.note--active {
+  background-color: whitesmoke;
+  border-left: 10px solid greenyellow
+}
+
+.note dl, .note dt, .note dd {
+  margin: 0;
+  padding: 0;
+}
+
+.note dt, .note dd {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.note dt {
+  font-size: 120%;
+  font-weight: bold;
+  margin: 0.25em 0;
+}
+
+.note dd {
+  font-size: 90%;
+  font-style: italic;
+  color: lightslategray;
+}
+
+.note-add {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: slateblue;
+  color: white;
+  font-weight: 100;
+}
+
+.note-add:hover {
+  background-color: white;
+  color: slateblue;
+}
+
+.edit-note {
+  background: whitesmoke center;
+  padding: 0 40px 40px;
+}
+
+.edit-note header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-note textarea {
+  border: none;
+  width: 100%;
+  height: calc(100% - 40px);
+  resize: none;
+  border-radius: 5px;
+  font-size: 150%;
+  padding: 35px;
+}
+
+.edit-note textarea:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  background-color: crimson;
+  border: none;
+  box-shadow: none;
+  width: 40px;
+  height: 40px;
+  color: white;
+  transition: all 0.3s;
+  font-size: 115%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button:hover {
+  background: white;
+  color: slateblue;
+}
